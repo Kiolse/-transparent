@@ -39,7 +39,7 @@
 
   /* 极简 Button */
   .btn {
-    display: inline-flex;
+    display: inline-flex !important;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
@@ -54,6 +54,7 @@
     color: hsl(var(--foreground));
     padding: 0.5rem 1rem;
     height: 2.25rem;
+    min-height: 2.25rem;
   }
 
   .btn:hover {
@@ -61,13 +62,13 @@
   }
 
   .btn-primary {
-    background-color: hsl(var(--primary));
-    color: hsl(var(--primary-foreground));
-    border-color: hsl(var(--primary));
+    background-color: hsl(var(--primary)) !important;
+    color: hsl(var(--primary-foreground)) !important;
+    border-color: hsl(var(--primary)) !important;
   }
 
   .btn-primary:hover {
-    background-color: hsl(var(--primary) / 0.8);
+    background-color: hsl(0 0% 0% / 0.8) !important;
   }
 
   /* 极简 Input */
@@ -271,7 +272,8 @@
     gap: 0.75rem;
   }
 
-  .center-note .btn {
+  .center-note .btn,
+  .center-note label {
     pointer-events: auto;
   }
 
@@ -343,8 +345,8 @@
 
       <!-- 操作按钮 -->
       <div class="grid grid-cols-2 gap-3">
-        <button id="copy" class="btn h-9">复制</button>
-        <button id="download" class="btn btn-primary h-9">下载</button>
+        <button id="copy" class="btn">复制</button>
+        <button id="download" class="btn btn-primary">下载</button>
       </div>
     </div>
   </div>
